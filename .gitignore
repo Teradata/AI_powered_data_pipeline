@@ -69,6 +69,7 @@ tmp/
 dist/
 build/
 out/
+*.lock
 
 # Jupyter Notebook
 .ipynb_checkpoints
