@@ -15,16 +15,16 @@ A comprehensive tool for extracting text from PDF files and parsing it into stru
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- Teradata database access
+- Python 3.10 or higher
+- Teradata database access, get one for free at ClearScape Analytics Experience [https://www.teradata.com/getting-started/demos/clearscape-analytics?utm_campaign=gbl-clearscape-analytics-devrel&utm_content=demo&utm_id=7016R000001n3bCQAQ]
 - OpenAI API key
 
 ### Setup
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd healthcare_AI_ux
+git clone https://github.com/Teradata/AI_powered_data_pipeline
+cd AI_powered_data_pipeline
 ```
 
 2. Install dependencies using uv (recommended):
