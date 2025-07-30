@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HealthInsuranceFulfillmentReport",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "record_id": {
+        "type": "integer"
+      },
+      "report": {
+        "type": "object",
+        "properties": {
+          "insured_name": { "type": "string" },
+          "policy_number": { "type": "string" },
+          "coverage_period": {
+            "type": "object",
+            "properties": {
+              "start_date": { "type": "string", "format": "date" },
+              "end_date": { "type": "string", "format": "date" }
+            },
+            "required": ["start_date", "end_date"]
+          },
+          "insurer": { "type": "string" },
+          "benefits_utilized": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "visit_date": { "type": "string", "format": "date" },
+                "provider_name": { "type": "string" },
+                "service_type": { "type": "string" },
+                "diagnosis_code": { "type": "string" },
+                "amount_billed": { "type": "number" },
+                "amount_covered": { "type": "number" },
+                "co_pay": { "type": "number" },
+                "notes": { "type": "string" }
+              },
+              "required": [
+                "visit_date",
+                "provider_name",
+                "service_type",
+                "diagnosis_code",
+                "amount_billed",
+                "amount_covered",
+                "co_pay",
+                "notes"
+              ]
+            }
+          },
+          "total_summary": {
+            "type": "object",
+            "properties": {
+              "total_billed": { "type": "number" },
+              "total_covered": { "type": "number" },
+              "total_co_pay": { "type": "number" }
+            },
+            "required": ["total_billed", "total_covered", "total_co_pay"]
+          },
+          "generated_on": { "type": "string", "format": "date" },
+          "contact": { "type": "string", "format": "email" }
+        },
+        "required": [
+          "insured_name",
+          "policy_number",
+          "coverage_period",
+          "insurer",
+          "benefits_utilized",
+          "total_summary",
+          "generated_on",
+          "contact"
+        ]
+      }
+    },
+    "required": ["record_id", "report"]
+  }
+}

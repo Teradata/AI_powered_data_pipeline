@@ -1,0 +1,12 @@
+[project]
+name = "AI Powered Data Ingestion Pipeline"
+version = "0.1.0"
+description = "AI Powered Data Ingestion Tool - Extract text from PDF files and parse into structured data using OpenAI and Teradata"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "openai>=1.97.0",
+    "teradatasql>=20.0.0.0",
+    "python-dotenv>=1.1.0",
+    "pdfplumber>=0.11.7",
+]

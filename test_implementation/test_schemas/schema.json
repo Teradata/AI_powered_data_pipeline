@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HealthInsuranceVisit",
+  "type": "object",
+  "properties": {
+    "insured_name": {
+      "type": "string",
+      "description": "Full name of the insured person"
+    },
+    "policy_number": {
+      "type": "string",
+      "description": "Policy identifier for the insured"
+    },
+    "coverage_period": {
+      "type": "object",
+      "properties": {
+        "start_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "end_date": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": ["start_date", "end_date"]
+    },
+    "insurer": {
+      "type": "string",
+      "description": "Name of the insurance company"
+    },
+    "visit_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the medical visit"
+    },
+    "provider_name": {
+      "type": "string",
+      "description": "Full name of the provider, including credentials"
+    },
+    "service_type": {
+      "type": "string",
+      "description": "Type of service rendered during the visit"
+    },
+    "diagnosis_code": {
+      "type": "string",
+      "description": "ICD-10 diagnosis code"
+    },
+    "amount_billed": {
+      "type": "number",
+      "description": "Total amount billed for the service"
+    },
+    "amount_covered": {
+      "type": "number",
+      "description": "Amount covered by the insurance provider"
+    },
+    "copay": {
+      "type": "number",
+      "description": "Amount paid by the insured as co-pay"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about the visit (e.g., purpose)"
+    },
+    "report_generated_on": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the report was generated"
+    },
+    "source_file": {
+      "type": "string",
+      "description": "Filename of the PDF source"
+    }
+  },
+  "required": [
+    "insured_name",
+    "policy_number",
+    "coverage_period",
+    "insurer",
+    "visit_date",
+    "provider_name",
+    "service_type",
+    "diagnosis_code",
+    "amount_billed",
+    "amount_covered",
+    "copay",
+    "report_generated_on",
+    "source_file"
+  ]
+}
