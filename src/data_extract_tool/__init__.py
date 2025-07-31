@@ -1,8 +1,7 @@
 """
 Data Extract Tool Package
 
-A package for extracting text from PDF files and parsing it into structured data 
-for healthcare insurance documents using OpenAI and Teradata.
+A package for extracting text from PDF files and parsing it into structured data using OpenAI and Teradata.
 """
 
 from . import pdf_extractor
